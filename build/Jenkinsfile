@@ -1,0 +1,25 @@
+#!groovy
+ 
+pipeline {
+  agent {
+    label 'host'
+  }
+  
+  options {
+    buildDiscarder(logRotator(numToKeepStr: '10', daysToKeepStr: '7'))
+    disableConcurrentBuilds()
+  }
+  
+  stages {
+    // Add the stages here
+
+  }
+ 
+  post { 
+    always { 
+      script {
+        currentBuild.description = "goto <a href=https://www.${PUBLIC_IPADDRESS}.xip.io/port/9120/>App</a>"
+      }
+    }
+  }
+}

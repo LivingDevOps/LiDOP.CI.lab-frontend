@@ -1,0 +1,7 @@
+{ 
+    "Build_Application":
+    {
+        "Script": "./build/Jenkinsfile",
+        "TriggerOnPush" : true
+    }
+}

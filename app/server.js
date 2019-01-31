@@ -13,7 +13,7 @@ app.use('/proxy', proxy({
     pathRewrite: {
        '^/proxy/': '/'
     },
-    target: 'http://localhost:6080',
+    target: 'http://lab-backend:6080',
     secure: false
 }));
 

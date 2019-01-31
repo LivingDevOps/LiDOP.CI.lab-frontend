@@ -1,5 +1,4 @@
 const express = require('express');
-const bodyParser = require('body-parser')
 const path = require('path');
 const app = express();
 const proxy = require('http-proxy-middleware');
@@ -13,7 +12,7 @@ app.use('/proxy', proxy({
     pathRewrite: {
        '^/proxy/': '/'
     },
-    target: 'http://lab-backend:6080',
+    target: 'https://www.10.20.30.40.xip.io/port/9110',
     secure: false
 }));
 
